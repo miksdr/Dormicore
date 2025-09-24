@@ -1,0 +1,173 @@
+/* Base Reset and Body */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Header */
+.main-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #626eab;
+    color: white;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.app-title {
+    font-size: 22px;
+    margin: 0;
+}
+
+/* Navigation */
+.room-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.room-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.room-nav a:hover {
+    color: #ddd;
+}
+
+/* Main Content */
+main {
+    padding: 40px 30px;
+}
+
+/* Room List Layout */
+.room-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Room Card */
+.room-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 300px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Fully Occupied Tint */
+.room-card.full {
+    background-color: #f5f5f5;
+    opacity: 0.85;
+}
+
+/* Room Image */
+.room-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Room Details */
+.room-details {
+    padding: 0px 15px 25px 15px;
+}
+
+.room-details h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #4C4C4C;
+}
+
+.room-details p {
+    font-size: 14px;
+    margin: 3px 0;
+    color: #666;
+}
+
+.room-details p:last-child {
+    font-weight: 600;
+    color: #4CAF50;
+}
+
+
+/* No Rooms Message */
+.no-rooms {
+    text-align: center;
+    padding: 50px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Toast Message */
+.toast-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ccc;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .room-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .room-card {
+        width: 90%;
+    }
+
+    .room-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .room-nav a {
+        margin: 10px 0;
+    }
+
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+}
